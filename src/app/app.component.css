@@ -1,0 +1,89 @@
+app-cell {
+  height: 16.66%;
+  width: 16.66%;
+  display: block;
+  float: left;
+  border: 1px solid black;
+}
+.red {
+  background-color: #F00;
+}
+.orange {
+  background-color: #F80;
+}
+.yellow {
+  background-color: #FF0;
+}
+.green {
+  background-color: #0C0;
+}
+.blue {
+  background-color: #00F;
+}
+.black {
+  color: #333;
+}
+.white {
+  color: #ddd;
+}
+
+.top {
+  height: 10vmin;
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-family: monospace;
+  font-size: 8vmin;
+}
+.bottom {
+  width: 100%;
+  height: 8vmin;
+  border: 1vmin #FFF solid;
+  display: block;
+  text-align: center;
+  float: left;
+}
+.item {
+  position: relative;
+  background-color: #BBB;
+  border: 1px #000 solid;
+  padding: 1vmin;
+  font-family: monospace;
+  font-size: 4vmin;
+  display: inline-block;
+  text-align: center;
+}
+.item:active {
+  background-color: #AAA;
+}
+.item:hover {
+  background-color: #CCC;
+}
+.submenu {
+  background-color: #BBB;
+  border: 1px #000 solid;
+  display: none;
+  position: absolute;
+  bottom: 6vmin;
+  z-index: 1;
+  text-align: left;
+}
+.item:hover .submenu {
+  display: block;
+}
+.subitem {
+  width: 100%;
+  display: block;
+}
+.subitem:hover {
+  background-color: #CCC;
+}
+.square {
+  background-color: black;
+  border: 1px solid gray;
+  text-align: center;
+  vertical-align: center;
+  width: 80vmin;
+  height: 80vmin;
+  margin: auto;
+}

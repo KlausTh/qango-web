@@ -1,0 +1,162 @@
+<html>
+    <head>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  .square {
+    background-color: black;
+    border: 1px solid gray;
+    text-align: center;
+    vertical-align: center;
+    width: 80vmin;
+    height: 80vmin;
+    margin: auto;
+  }
+  .red, .green, .blue, .yellow {
+    height: 16.66%;
+    width: 16.66%;
+    float: left;
+    border: 1px solid black;
+  }
+  .red {
+    background-color: red;
+  }
+  .green {
+    background-color: green;
+  }
+  .blue {
+    background-color: blue;
+  }
+  .yellow {
+    background-color: yellow;
+  }
+  .sphere {
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: inset -1vmin -1vmin 1vmin #111, 1vmin 1vmin 2vmin #000, inset 0 0 1vmin #fff;
+    display: inline-block;
+    margin: 5%;
+  }
+  .black {
+    color: #333;
+  }
+  .bblack {
+    background-color: #333;
+  }
+  .white {
+    color: #ddd;
+  }
+  .bwhite {
+    background-color: #ddd;
+  }
+  input {
+    width: 20vw;
+  }
+  top {
+    height: 10vmin;
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-family: monospace;
+    font-size: 8vmin;
+  }
+  bottom {
+    width: 100%;
+    height: 8vmin;
+    border: 1vmin #FFF solid;
+    display: block;
+    text-align: center;
+    float: left;
+  }
+  item {
+    position: relative;
+    background-color: #BBB;
+    border: 1px #000 solid;
+    padding: 1vmin;
+    font-family: monospace;
+    font-size: 4vmin;
+    display: inline-block;
+    text-align: center;
+  }
+  item:active {
+    background-color: #AAA;
+  }
+  item:hover {
+    background-color: #CCC;
+  }
+  submenu {
+    background-color: #BBB;
+    border: 1px #000 solid;
+    display: none;
+    position: absolute;
+    bottom: 6vmin;
+    z-index: 1;
+    text-align: left;
+  }
+  item:hover submenu {
+    display: block;
+  }
+  subitem {
+    width: 100%;
+    display: block;
+  }
+  subitem:hover {
+    background-color: #CCC;
+  }
+</style>
+</head>
+<body>
+  <top>QANGO</top>
+  <div class="square">
+    <div class="blue"><div class=""></div></div>
+    <div class="blue"><div class="sphere bwhite"></div></div>
+    <div class="red"><div class="sphere bblack"></div></div>
+    <div class="red"><div class="sphere bwhite"></div></div>
+    <div class="blue"><div class="sphere bblack"></div></div>
+    <div class="blue"><div class=""></div></div>
+
+    <div class="blue"><div class=""></div></div>
+    <div class="red"><div class=""></div></div>
+    <div class="green"><div class=""></div></div>
+    <div class="yellow"><div class=""></div></div>
+    <div class="red"><div class=""></div></div>
+    <div class="blue"><div class=""></div></div>
+
+    <div class="red"><div class=""></div></div>
+    <div class="green"><div class=""></div></div>
+    <div class="green"><div class=""></div></div>
+    <div class="yellow"><div class=""></div></div>
+    <div class="yellow"><div class="sphere bwhite"></div></div>
+    <div class="red"><div class=""></div></div>
+
+    <div class="red"><div class=""></div></div>
+    <div class="yellow"><div class=""></div></div>
+    <div class="yellow"><div class=""></div></div>
+    <div class="green"><div class=""></div></div>
+    <div class="green"><div class=""></div></div>
+    <div class="red"><div class=""></div></div>
+
+    <div class="blue"><div class=""></div></div>
+    <div class="red"><div class=""></div></div>
+    <div class="yellow"><div class=""></div></div>
+    <div class="green"><div class=""></div></div>
+    <div class="red"><div class=""></div></div>
+    <div class="blue"><div class=""></div></div>
+
+    <div class="blue"><div class=""></div></div>
+    <div class="blue"><div class=""></div></div>
+    <div class="red"><div class=""></div></div>
+    <div class="red"><div class=""></div></div>
+    <div class="blue"><div class=""></div></div>
+    <div class="blue"><div class=""></div></div>
+  </div>
+  <bottom>
+    <item><submenu><subitem>Computer</subitem><subitem>Mensch</subitem></submenu><span class="white">&#x25CF;</span> Mensch</item>
+    <item>Neues Spiel</item>
+    <item><submenu><subitem>Computer</subitem><subitem>Mensch</subitem></submenu><span class="black">&#x25CF;</span> Computer</item>
+  </bottom>
+</body>
+</html>

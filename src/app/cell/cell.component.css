@@ -1,0 +1,23 @@
+.full {
+  height: 100%;
+  width: 100%;
+}
+.winning {
+  background-color: whitesmoke;
+}
+
+.sphere {
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: inset -1vmin -1vmin 1vmin #111, 1vmin 1vmin 2vmin #000, inset 0 0 1vmin #fff;
+  display: inline-block;
+  margin: 5%;
+}
+.bblack {
+  background-color: #333;
+}
+.bwhite {
+  background-color: #ddd;
+}

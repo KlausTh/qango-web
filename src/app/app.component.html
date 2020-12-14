@@ -1,0 +1,23 @@
+
+<div class="top">QANGO</div>
+<div class="square">
+  <app-cell  *ngFor="let i of [00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35]"
+   [index]="i" class="{{ colors[i] }}"></app-cell>
+</div>
+<!--<hr>-->
+<!--<small>Position: {{ game.board.id }}</small>-->
+<div class="bottom">
+  <div class="item">
+    <div class="submenu">
+      <div class="subitem" (click)="white_computer()">Computer</div>
+      <div class="subitem" (click)="white_human()">Human</div>
+    </div>
+    <span class="white">&#x25CF;</span> {{ getWhite() }}</div>
+  <div class="item" (click)="newgame()">New Game</div>
+  <div class="item">
+    <div class="submenu">
+      <div class="subitem" (click)="black_computer()">Computer</div>
+      <div class="subitem" (click)="black_human()">Human</div>
+    </div>
+    <span class="black">&#x25CF;</span> {{ getBlack() }}</div>
+</div>
