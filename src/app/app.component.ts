@@ -22,7 +22,7 @@ export class AppComponent {
   public game : Game = {
     board : null,
     ailevel : 0,
-    players : [Player.Human, Player.Computer],
+    players : [Player.Human, Player.Normal],
   };
 
   constructor(private service : QangoService) {
@@ -41,42 +41,23 @@ export class AppComponent {
       );
   }
 
-  public white_computer() {
-    this.game.players[0] = Player.Computer;
+  public white(level : number) {
+    this.game.players[0] = level;
   }
-
-  public white_human() {
-    this.game.players[0] = Player.Human;
-  }
-
   public getWhite() {
-    switch (this.game.players[0]) {
-      case Player.Human: {
-        return "Human";
-      }
-      case Player.Computer: {
-        return "Computer";
-      }
-    }
+    let index = this.game.players[0].valueOf();
+
+    return Player[index];
+  }
+
+  public black(level : number) {
+    this.game.players[1] = level;
   }
 
   public getBlack() {
-    switch (this.game.players[1]) {
-      case Player.Human: {
-        return "Human";
-      }
-      case Player.Computer: {
-        return "Computer";
-      }
-    }
-  }
+    let index = this.game.players[1].valueOf();
 
-  public black_computer() {
-    this.game.players[1] = Player.Computer;
-  }
-
-  public black_human() {
-    this.game.players[1] = Player.Human;
+    return Player[index];
   }
 
   public click(index : number) {
@@ -87,9 +68,11 @@ export class AppComponent {
   public update(nboard : Board) {
     this.game.board = nboard;
 
-    if ((nboard.next == Side.White) && (this.game.players[0] == Player.Computer)
-      ||(nboard.next == Side.Black) && (this.game.players[1] == Player.Computer)) {
-      this.aiturn();
+    if ((nboard.next == Side.White) && (this.game.players[0] != Player.Human)) {
+      this.aiturn(this.game.players[0].valueOf());
+    }
+    if ((nboard.next == Side.Black) && (this.game.players[1] != Player.Human)) {
+      this.aiturn(this.game.players[1].valueOf());
     }
   }
 
@@ -104,8 +87,8 @@ export class AppComponent {
     )
   }
 
-  aiturn() {
-    this.service.aiturn(this.game.board.id).subscribe(
+  aiturn(level : number) {
+    this.service.aiturn(this.game.board.id, level).subscribe(
       nboard => {
         this.update(nboard);
       },

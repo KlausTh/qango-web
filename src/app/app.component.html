@@ -9,15 +9,19 @@
 <div class="bottom">
   <div class="item">
     <div class="submenu">
-      <div class="subitem" (click)="white_computer()">Computer</div>
-      <div class="subitem" (click)="white_human()">Human</div>
+      <div class="subitem" (click)="white(2)">Computer&nbsp;hard</div>
+      <div class="subitem" (click)="white(1)">Computer&nbsp;normal</div>
+      <div class="subitem" (click)="white(0)">Computer&nbsp;easy</div>
+      <div class="subitem" (click)="white(-1)">Human</div>
     </div>
     <span class="white">&#x25CF;</span> {{ getWhite() }}</div>
   <div class="item" (click)="newgame()">New Game</div>
   <div class="item">
     <div class="submenu">
-      <div class="subitem" (click)="black_computer()">Computer</div>
-      <div class="subitem" (click)="black_human()">Human</div>
+      <div class="subitem" (click)="black(2)">Computer&nbsp;hard</div>
+      <div class="subitem" (click)="black(1)">Computer&nbsp;normal</div>
+      <div class="subitem" (click)="black(0)">Computer&nbsp;easy</div>
+      <div class="subitem" (click)="black(-1)">Human</div>
     </div>
     <span class="black">&#x25CF;</span> {{ getBlack() }}</div>
 </div>

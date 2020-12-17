@@ -23,8 +23,8 @@ export class QangoService {
     return this.http.get<Board>(url);
   }
 
-  aiturn(id : number) : Observable<Board> {
-    let url = environment.qangoUrl + "board/" + id + "/aiturn";
+  aiturn(id : number, level : number) : Observable<Board> {
+    let url = environment.qangoUrl + "board/" + id + "/aiturn/" + level;
 
     return this.http.get<Board>(url);
   }

@@ -15,8 +15,10 @@ export interface Board {
 }
 
 export enum Player {
-  Human = "human",
-  Computer = "computer",
+  Human = -1,
+  Easy = 0,
+  Normal = 1,
+  Hard = 2,
 }
 
 export interface Game {
